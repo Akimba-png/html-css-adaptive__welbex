@@ -1,0 +1,19 @@
+.main-navigation {
+  display: flex;
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 140px 1fr max-content;
+    align-items: center;
+    gap: 52px;
+  }
+}
+
+.main-navigation__logo {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: flex;
+    padding: 0 15px;
+  }
+}

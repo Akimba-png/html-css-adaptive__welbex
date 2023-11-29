@@ -1,0 +1,23 @@
+.page-header {
+  padding: 0 8px;
+
+  @media (min-width: $desktop) {
+    margin: 0 auto;
+    max-width: 1170px;
+  }
+}
+
+.page-header__slogan {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+    margin: 0;
+    padding: 0 15px;
+    width: 140px;
+
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+  }
+}

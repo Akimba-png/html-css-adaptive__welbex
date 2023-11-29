@@ -14,8 +14,12 @@
   font-style: normal;
   line-height: normal;
 
-  color: var(--light-text, #e4e5eA);
+  color: var(--light-text, #e4e5ea);
   background-color: var(--black, #0e1014);
+
+  @media (min-width: $desktop) {
+    padding-top: 48px;
+  }
 }
 
 .visually-hidden {
