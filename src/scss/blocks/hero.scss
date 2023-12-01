@@ -1,0 +1,31 @@
+.hero {
+  padding: 0 14px;
+}
+
+.hero__title {
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-size: 36px;
+  font-weight: 400;
+  line-height: normal;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 30px;
+    font-size: 48px;
+  }
+}
+
+.hero__accent {
+  font-weight: 900;
+  background-image: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero__slogan {
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 18px;
+}

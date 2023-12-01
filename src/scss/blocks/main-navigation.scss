@@ -3,9 +3,9 @@
 
   @media (min-width: $desktop) {
     display: grid;
-    grid-template-columns: 140px 1fr max-content;
+    grid-template-columns: 180px 1fr max-content;
     align-items: center;
-    gap: 52px;
+    gap: 12px;
   }
 }
 

@@ -3,10 +3,15 @@
 }
 
 .page__body {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
   padding: 0;
+  margin: 0 auto;
   min-width: 320px;
   min-height: 100%;
+  max-width: 480px;
 
   font-family: "Inter", "Arial", sans-serif;
   font-size: 16px;
@@ -19,6 +24,22 @@
 
   @media (min-width: $desktop) {
     padding-top: 48px;
+    max-width: 1440px;
+  }
+}
+
+.page__main {
+  flex-grow: 1;
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 0 auto;
+    padding-top: 90px;
+    min-width: 1170px;
+    max-width: 1170px;
   }
 }
 
@@ -33,6 +54,21 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.button {
+  display: block;
+  box-sizing: border-box;
+  padding: 21px 35px;
+  border: none;
+  text-align: center;
+  background-color: var(--button-color);
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 a {
