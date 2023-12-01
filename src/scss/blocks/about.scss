@@ -1,0 +1,25 @@
+.about {
+  padding: 0 5px;
+}
+
+.about__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--dark-gray, #656566);
+}
+
+.about__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about__link {
+  font-size: 14px;
+}

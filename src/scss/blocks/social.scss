@@ -10,6 +10,12 @@
   }
 }
 
+.social--footer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6px;
+}
+
 .social__tel {
   padding: 12px 15px;
 
@@ -17,6 +23,10 @@
   &:focus {
     opacity: 0.5;
   }
+}
+
+.social__tel--footer {
+  padding: 4px 5px;
 }
 
 .social__list {
@@ -42,6 +52,12 @@
   }
 }
 
+.social__link--footer {
+  padding: 4px 5px;
+  width: 24px;
+  height: 24px;
+}
+
 .social__link::before {
   content: "";
   position: absolute;
@@ -50,6 +66,11 @@
   width: 20px;
   height: 20px;
   transform: translate(-50%, -50%);
+}
+
+.social__link--footer::before {
+  width: 24px;
+  height: 24px;
 }
 
 .social__link--tg::before {
