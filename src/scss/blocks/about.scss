@@ -9,6 +9,11 @@
   letter-spacing: 0.6px;
   text-transform: uppercase;
   color: var(--dark-gray, #656566);
+
+  @media (min-width: $desktop) {
+    font-size: 14px;
+    letter-spacing: 0.7px;
+  }
 }
 
 .about__list {
@@ -18,8 +23,20 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $desktop) {
+    gap: 10px;
+  }
 }
 
 .about__link {
   font-size: 14px;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 16px;
+  }
 }

@@ -1,5 +1,13 @@
 .page-footer {
   padding: 40px 11px 60px;
+
+  @media (min-width: $desktop) {
+    margin: 0 auto;
+    padding: 62px 10px 20px;
+    box-sizing: border-box;
+    min-width: 1170px;
+    max-width: 1170px;
+  }
 }
 
 .page-footer__about {
@@ -8,6 +16,20 @@
 
 .page-footer__wrapper {
   margin-bottom: 50px;
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__privacy-box {
+  @media (min-width: $desktop) {
+    margin-left: auto;
+    padding-right: 5px;
+    width: max-content;
+  }
 }
 
 .page-footer__copyright {
@@ -16,6 +38,11 @@
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 12px;
   font-weight: 400;
+
+  @media (min-width: $desktop) {
+    margin-top: 2px;
+    margin-bottom: 8px;
+  }
 }
 
 .page-footer__privacy {
@@ -25,4 +52,9 @@
   font-weight: 400;
   text-decoration: underline;
   text-underline-offset: 2px;
+
+  @media (min-width: $desktop) {
+    display: block;
+    text-align: end;
+  }
 }

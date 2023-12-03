@@ -1,6 +1,10 @@
 .menu {
   margin-bottom: 30px;
   padding: 0 5px;
+
+  @media (min-width: $desktop) {
+    padding: 0 10px;
+  }
 }
 
 .menu__title {
@@ -10,6 +14,12 @@
   letter-spacing: 0.6px;
   text-transform: uppercase;
   color: var(--dark-gray, #656566);
+
+  @media (min-width: $desktop) {
+    margin-bottom: 20px;
+    font-size: 14px;
+    letter-spacing: 0.7px;
+  }
 }
 
 .menu__list {
@@ -20,8 +30,22 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr 2fr;
+    column-gap: 15px;
+    row-gap: 9px;
+  }
 }
 
 .menu__link {
   font-size: 14px;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 16px;
+  }
 }
