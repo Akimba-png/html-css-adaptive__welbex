@@ -55,8 +55,8 @@
   filter: drop-shadow(3px 6px 27px var(--second-ball-shadow)) blur(3px);
   transition: transform 1.5s ease;
 
-  @media(min-width: $desktop) {
-    transform: translate(-335px, -345px) scale(2.0);
+  @media (min-width: $desktop) {
+    transform: translate(-335px, -345px) scale(2);
     filter: drop-shadow(3px 6px 27px var(--second-ball-shadow));
   }
 }
