@@ -1,0 +1,98 @@
+.visual {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.visual__item {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.visual__item--first-ball {
+  width: 43px;
+  height: 43px;
+  bottom: 10px;
+  left: calc((29 / 320) * 100%);
+  background-image: url("../assets/red-ball.svg");
+  background-size: cover;
+  filter: drop-shadow(3px 6px 27px var(--first-ball-shadow));
+  transition: transform 1.5s ease;
+
+  @media (min-width: $desktop) {
+    transform: translate(305px, -510px) scale(2.5);
+  }
+}
+
+.visual__item--first-light {
+  z-index: -2;
+  width: 211px;
+  height: 210px;
+  left: calc((-55 / 320) * 100%);
+  bottom: 0;
+  opacity: 0.5;
+  background-color: var(--fist-light);
+  filter: blur(130px);
+  transition: transform 1.5s ease;
+
+  @media (min-width: $desktop) {
+    transform: translate(120px, -145px) scale(1.5);
+  }
+}
+
+.visual__item--second-ball {
+  z-index: 0;
+  width: 40px;
+  height: 40px;
+  top: 236px;
+  left: calc((296 / 320) * 100%);
+  background-image: url("../assets/purple-ball.svg");
+  background-size: cover;
+  backdrop-filter: blur(2px);
+  filter: drop-shadow(3px 6px 27px var(--second-ball-shadow)) blur(3px);
+  transition: transform 1.5s ease;
+
+  @media(min-width: $desktop) {
+    transform: translate(-335px, -345px) scale(2.0);
+    filter: drop-shadow(3px 6px 27px var(--second-ball-shadow));
+  }
+}
+
+.visual__item--second-light {
+  z-index: -2;
+  position: absolute;
+  content: "";
+  top: 107px;
+  left: calc((258 / 320) * 100%);
+  width: 259px;
+  height: 259px;
+  border-radius: 259px;
+  opacity: 0.5;
+  background-color: var(--second-light);
+  filter: blur(130px);
+  transition: transform 1.5s ease;
+
+  @media (min-width: $desktop) {
+    transform: translate(-520px, -445px);
+  }
+}
+
+.visual__item--third-ball {
+  width: 28px;
+  height: 28px;
+  top: 630px;
+  left: calc((20 / 320) * 100%);
+  background-image: url("../assets/yellow-ball.svg");
+  background-size: cover;
+  filter: drop-shadow(3px 6px 27px var(--first-ball-shadow)) blur(2.5px);
+  backdrop-filter: blur(2px);
+  transition: transform 1.5s ease;
+
+  @media (min-width: $desktop) {
+    transform: translate(645px, -200px) scale(1.8);
+    filter: drop-shadow(3px 6px 27px var(--first-ball-shadow));
+  }
+}

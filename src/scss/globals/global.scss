@@ -29,6 +29,8 @@
 }
 
 .page__main {
+  position: relative;
+  overflow: hidden;
   flex-grow: 1;
   padding-top: 40px;
   padding-bottom: 60px;
@@ -36,10 +38,25 @@
   @media (min-width: $desktop) {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    overflow: visible;
     margin: 0 auto;
     padding-top: 90px;
     min-width: 1170px;
     max-width: 1170px;
+  }
+}
+
+.page__main::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: var(--background-gradient), url("../assets/noise.png");
+  backdrop-filter: blur(7.5px);
+  transition: opacity 2s ease;
+
+  @media (min-width: $desktop) {
+    opacity: 0;
   }
 }
 

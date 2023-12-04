@@ -56,6 +56,16 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'html-loader',
+        options: {
+          sources: {
+            urlFilter: (_attribute, value, _resourcePath) => {
+              if (/\.svg/.test(value)) {
+                return false;
+              }
+              return true;
+            },
+          },
+        },
       },
       {
         test: /\.(c|sa|sc)ss$/,
@@ -66,7 +76,7 @@ module.exports = {
             options: {
               url: {
                 filter: (url) => {
-                  if (/\.svg/.test(url)) {
+                  if (/(icons\/\.+)|(sprite)\.svg/.test(url)) {
                     return false;
                   }
                   return true;
@@ -91,11 +101,15 @@ module.exports = {
         test: /\.woff2$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'fonts/[name].[ext]',
+          filename: 'fonts/[name][ext]',
         },
       },
       {
-        test: /\.(png|jpe?g)/,
+        test: /\.png|svg$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/[name][ext]',
+        },
         use: isProd ? [
           {
             loader: 'image-webpack-loader',
@@ -113,11 +127,7 @@ module.exports = {
             }
           },
         ] : [],
-        type: 'asset/resource',
-        generator: {
-          filename: 'assets/[name].[ext]',
-        },
-      }
+      },
     ]
   }
 };
