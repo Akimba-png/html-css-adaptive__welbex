@@ -24,3 +24,6 @@
 ```
 npm run start
 ```
+
+## Проект развёрнут по адресу
+https://html-css-adaptive-welbex.web.app/
